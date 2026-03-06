@@ -1097,3 +1097,104 @@ html[data-mode="recruiter"] .link{ color: rgba(255,77,166,.96); }
     max-width: none;
   }
 }
+
+/* === Reframed editorial style: bold, laconic, high-contrast === */
+:root{
+  --bg0:#f7f4ee;
+  --bg1:#efe8db;
+  --ink:#111111;
+  --muted: rgba(17,17,17,.74);
+  --muted2: rgba(17,17,17,.56);
+
+  --card: rgba(255,255,255,.84);
+  --stroke: rgba(17,17,17,.16);
+
+  --shadow: 0 20px 45px rgba(17,17,17,.12);
+  --shadow2: 0 8px 24px rgba(17,17,17,.10);
+
+  --radius: 14px;
+
+  --blue:#d7422d;
+  --blue2:#9f2315;
+  --pink:#d7422d;
+  --pink2:#b22f1d;
+
+  --tintA: rgba(215, 66, 45, .12);
+  --tintB: rgba(17, 17, 17, .08);
+  --tint2: rgba(215, 66, 45, .06);
+}
+
+body{
+  background:
+    radial-gradient(1000px 620px at 8% 8%, var(--tint), transparent 55%),
+    radial-gradient(900px 520px at 94% 0%, rgba(17,17,17,.05), transparent 58%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+}
+
+.header{
+  background: rgba(247, 244, 238, .9);
+  border-bottom: 2px solid rgba(17,17,17,.1);
+}
+
+.brand__badge,
+.modeSwitch,
+.pill,
+.card,
+.chatCard,
+.btn,
+.note,
+.modal__panel,
+.pricing__badge{
+  border-radius: var(--radius);
+}
+
+.card,
+.chatCard,
+.modal__panel,
+.modeSwitch,
+.pricing__badge{
+  border-color: rgba(17,17,17,.16);
+}
+
+.nav__link{
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.h1{
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.btn--primary{
+  background: linear-gradient(135deg, #d7422d, #9f2315);
+  border-color: rgba(122,25,14,.4);
+  box-shadow: 0 16px 34px rgba(122,25,14,.24);
+}
+html[data-mode="recruiter"] .btn--primary{
+  background: linear-gradient(135deg, #111111, #2f2f2f);
+  border-color: rgba(17,17,17,.45);
+  box-shadow: 0 16px 34px rgba(17,17,17,.25);
+}
+
+.link{ color:#b63422; }
+html[data-mode="recruiter"] .link{ color:#111; }
+
+.footer{
+  background: rgba(255,255,255,.42);
+  border-top: 2px solid rgba(17,17,17,.12);
+}
+.footer__disclaimer{
+  padding-top: 8px;
+}
+.footer__disclaimer .link{
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 720px){
+  .h1{ letter-spacing: -0.015em; }
+  .nav__link{ font-size: 11px; }
+}
